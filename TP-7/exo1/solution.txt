@@ -33,7 +33,7 @@ CREATE TABLE title (
 ) WITH (
     KAFKA_TOPIC='titles',
     PARTITIONS='4',
-    VALUE_FORMAT='JSON',
+    VALUE_FORMAT='JSON'
 );
 
 LIST STREAMS;
