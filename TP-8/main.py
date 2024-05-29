@@ -70,7 +70,7 @@ download_images = PythonOperator(
 
 notify = BashOperator(
     task_id="notify",
-    bash_command=f"ls -l {IMAGES_FOLDER} | egrep -c '^-'",
+    bash_command=f"echo There are $(ls -l TP-8/tmp/images | egrep -c '^-') images",
     dag=dag
 )
 
