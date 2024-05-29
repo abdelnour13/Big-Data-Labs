@@ -30,7 +30,7 @@ pairs = file_without_header \
     .map(lambda row : (row[genre], 1)) 
 
 ### reduce 
-reduced_pairs = pairs.reduceByKey(add)
+reduced_pairs = pairs.reduceByKey(lambda  a,b : a + b)
 
 ### save the results to a file
 print("\n\n"+str(reduced_pairs.collect())+"\n\n")
